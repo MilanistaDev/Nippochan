@@ -14,6 +14,14 @@
 		19214EEC21C124D20036049D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19214EEA21C124D20036049D /* LaunchScreen.storyboard */; };
 		19214EF721C124D20036049D /* NippoChanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19214EF621C124D20036049D /* NippoChanTests.swift */; };
 		19214F0221C124D20036049D /* NippoChanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19214F0121C124D20036049D /* NippoChanUITests.swift */; };
+		19214F1521C12B550036049D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19214F1321C12B550036049D /* Interface.storyboard */; };
+		19214F1721C12B560036049D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19214F1621C12B560036049D /* Assets.xcassets */; };
+		19214F1E21C12B560036049D /* NippochanWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 19214F1D21C12B560036049D /* NippochanWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		19214F2321C12B570036049D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19214F2221C12B570036049D /* InterfaceController.swift */; };
+		19214F2521C12B570036049D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19214F2421C12B570036049D /* ExtensionDelegate.swift */; };
+		19214F2721C12B570036049D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19214F2621C12B570036049D /* ComplicationController.swift */; };
+		19214F2921C12B570036049D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19214F2821C12B570036049D /* Assets.xcassets */; };
+		19214F2D21C12B570036049D /* NippochanWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 19214F1121C12B550036049D /* NippochanWatch.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +39,46 @@
 			remoteGlobalIDString = 19214EDD21C124D00036049D;
 			remoteInfo = NippoChan;
 		};
+		19214F1F21C12B560036049D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19214ED621C124D00036049D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19214F1C21C12B560036049D;
+			remoteInfo = "NippochanWatch Extension";
+		};
+		19214F2B21C12B570036049D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19214ED621C124D00036049D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19214F1021C12B550036049D;
+			remoteInfo = NippochanWatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		19214F3121C12B570036049D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				19214F1E21C12B560036049D /* NippochanWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19214F3521C12B570036049D /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				19214F2D21C12B570036049D /* NippochanWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		19214EDE21C124D00036049D /* NippoChan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NippoChan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +94,16 @@
 		19214EFD21C124D20036049D /* NippoChanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NippoChanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19214F0121C124D20036049D /* NippoChanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NippoChanUITests.swift; sourceTree = "<group>"; };
 		19214F0321C124D20036049D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19214F1121C12B550036049D /* NippochanWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NippochanWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19214F1421C12B550036049D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		19214F1621C12B560036049D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19214F1821C12B560036049D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19214F1D21C12B560036049D /* NippochanWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NippochanWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19214F2221C12B570036049D /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		19214F2421C12B570036049D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		19214F2621C12B570036049D /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		19214F2821C12B570036049D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19214F2A21C12B570036049D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +128,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19214F1A21C12B560036049D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +144,8 @@
 				19214EE021C124D00036049D /* NippoChan */,
 				19214EF521C124D20036049D /* NippoChanTests */,
 				19214F0021C124D20036049D /* NippoChanUITests */,
+				19214F1221C12B550036049D /* NippochanWatch */,
+				19214F2121C12B570036049D /* NippochanWatch Extension */,
 				19214EDF21C124D00036049D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +156,8 @@
 				19214EDE21C124D00036049D /* NippoChan.app */,
 				19214EF221C124D20036049D /* NippoChanTests.xctest */,
 				19214EFD21C124D20036049D /* NippoChanUITests.xctest */,
+				19214F1121C12B550036049D /* NippochanWatch.app */,
+				19214F1D21C12B560036049D /* NippochanWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +193,28 @@
 			path = NippoChanUITests;
 			sourceTree = "<group>";
 		};
+		19214F1221C12B550036049D /* NippochanWatch */ = {
+			isa = PBXGroup;
+			children = (
+				19214F1321C12B550036049D /* Interface.storyboard */,
+				19214F1621C12B560036049D /* Assets.xcassets */,
+				19214F1821C12B560036049D /* Info.plist */,
+			);
+			path = NippochanWatch;
+			sourceTree = "<group>";
+		};
+		19214F2121C12B570036049D /* NippochanWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				19214F2221C12B570036049D /* InterfaceController.swift */,
+				19214F2421C12B570036049D /* ExtensionDelegate.swift */,
+				19214F2621C12B570036049D /* ComplicationController.swift */,
+				19214F2821C12B570036049D /* Assets.xcassets */,
+				19214F2A21C12B570036049D /* Info.plist */,
+			);
+			path = "NippochanWatch Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +225,12 @@
 				19214EDA21C124D00036049D /* Sources */,
 				19214EDB21C124D00036049D /* Frameworks */,
 				19214EDC21C124D00036049D /* Resources */,
+				19214F3521C12B570036049D /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				19214F2C21C12B570036049D /* PBXTargetDependency */,
 			);
 			name = NippoChan;
 			productName = NippoChan;
@@ -181,6 +273,40 @@
 			productReference = 19214EFD21C124D20036049D /* NippoChanUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		19214F1021C12B550036049D /* NippochanWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19214F3221C12B570036049D /* Build configuration list for PBXNativeTarget "NippochanWatch" */;
+			buildPhases = (
+				19214F0F21C12B550036049D /* Resources */,
+				19214F3121C12B570036049D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19214F2021C12B560036049D /* PBXTargetDependency */,
+			);
+			name = NippochanWatch;
+			productName = NippochanWatch;
+			productReference = 19214F1121C12B550036049D /* NippochanWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		19214F1C21C12B560036049D /* NippochanWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19214F2E21C12B570036049D /* Build configuration list for PBXNativeTarget "NippochanWatch Extension" */;
+			buildPhases = (
+				19214F1921C12B560036049D /* Sources */,
+				19214F1A21C12B560036049D /* Frameworks */,
+				19214F1B21C12B560036049D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NippochanWatch Extension";
+			productName = "NippochanWatch Extension";
+			productReference = 19214F1D21C12B560036049D /* NippochanWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,6 +328,12 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 19214EDD21C124D00036049D;
 					};
+					19214F1021C12B550036049D = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					19214F1C21C12B560036049D = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 19214ED921C124D00036049D /* Build configuration list for PBXProject "NippoChan" */;
@@ -220,6 +352,8 @@
 				19214EDD21C124D00036049D /* NippoChan */,
 				19214EF121C124D20036049D /* NippoChanTests */,
 				19214EFC21C124D20036049D /* NippoChanUITests */,
+				19214F1021C12B550036049D /* NippochanWatch */,
+				19214F1C21C12B560036049D /* NippochanWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +380,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19214F0F21C12B550036049D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19214F1721C12B560036049D /* Assets.xcassets in Resources */,
+				19214F1521C12B550036049D /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19214F1B21C12B560036049D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19214F2921C12B570036049D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +428,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19214F1921C12B560036049D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19214F2521C12B570036049D /* ExtensionDelegate.swift in Sources */,
+				19214F2321C12B570036049D /* InterfaceController.swift in Sources */,
+				19214F2721C12B570036049D /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +450,16 @@
 			isa = PBXTargetDependency;
 			target = 19214EDD21C124D00036049D /* NippoChan */;
 			targetProxy = 19214EFE21C124D20036049D /* PBXContainerItemProxy */;
+		};
+		19214F2021C12B560036049D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19214F1C21C12B560036049D /* NippochanWatch Extension */;
+			targetProxy = 19214F1F21C12B560036049D /* PBXContainerItemProxy */;
+		};
+		19214F2C21C12B570036049D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19214F1021C12B550036049D /* NippochanWatch */;
+			targetProxy = 19214F2B21C12B570036049D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -307,6 +478,14 @@
 				19214EEB21C124D20036049D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		19214F1321C12B550036049D /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19214F1421C12B550036049D /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -548,6 +727,88 @@
 			};
 			name = Release;
 		};
+		19214F2F21C12B570036049D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7M7ZGYSAKB;
+				INFOPLIST_FILE = "NippochanWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ASTK.NippoChan.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Debug;
+		};
+		19214F3021C12B570036049D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7M7ZGYSAKB;
+				INFOPLIST_FILE = "NippochanWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ASTK.NippoChan.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Release;
+		};
+		19214F3321C12B570036049D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7M7ZGYSAKB;
+				IBSC_MODULE = NippochanWatch_Extension;
+				INFOPLIST_FILE = NippochanWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ASTK.NippoChan.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Debug;
+		};
+		19214F3421C12B570036049D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7M7ZGYSAKB;
+				IBSC_MODULE = NippochanWatch_Extension;
+				INFOPLIST_FILE = NippochanWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ASTK.NippoChan.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,6 +844,24 @@
 			buildConfigurations = (
 				19214F0D21C124D20036049D /* Debug */,
 				19214F0E21C124D20036049D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19214F2E21C12B570036049D /* Build configuration list for PBXNativeTarget "NippochanWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19214F2F21C12B570036049D /* Debug */,
+				19214F3021C12B570036049D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19214F3221C12B570036049D /* Build configuration list for PBXNativeTarget "NippochanWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19214F3321C12B570036049D /* Debug */,
+				19214F3421C12B570036049D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
