@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProfileViewController.swift
 //  NippoChan
 //
 //  Created by 麻生 拓弥 on 2018/12/12.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.setUpUI()
     }
 
-
+    fileprivate func setUpUI() {
+        self.navigationItem.title = "PROFILE"
+    }
 }
-
