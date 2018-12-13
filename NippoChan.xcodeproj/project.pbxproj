@@ -22,6 +22,8 @@
 		19214F2921C12B570036049D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19214F2821C12B570036049D /* Assets.xcassets */; };
 		19214F2D21C12B570036049D /* NippochanWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 19214F1121C12B550036049D /* NippochanWatch.app */; };
 		19214F3921C1371B0036049D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19214F3821C1371B0036049D /* ProfileViewController.swift */; };
+		19BBBAA121C269DD003876D2 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBA9F21C269DD003876D2 /* UserInfoTableViewCell.swift */; };
+		19BBBAA221C269DD003876D2 /* UserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBAA021C269DD003876D2 /* UserInfoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		19214F2821C12B570036049D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19214F2A21C12B570036049D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19214F3821C1371B0036049D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		19BBBA9F21C269DD003876D2 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
+		19BBBAA021C269DD003876D2 /* UserInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,8 @@
 				19214EE821C124D20036049D /* Assets.xcassets */,
 				19214EEA21C124D20036049D /* LaunchScreen.storyboard */,
 				19214EED21C124D20036049D /* Info.plist */,
+				19BBBA9F21C269DD003876D2 /* UserInfoTableViewCell.swift */,
+				19BBBAA021C269DD003876D2 /* UserInfoTableViewCell.xib */,
 			);
 			path = NippoChan;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19BBBAA221C269DD003876D2 /* UserInfoTableViewCell.xib in Resources */,
 				19214EEC21C124D20036049D /* LaunchScreen.storyboard in Resources */,
 				19214EE921C124D20036049D /* Assets.xcassets in Resources */,
 				19214EE721C124D00036049D /* Main.storyboard in Resources */,
@@ -407,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19BBBAA121C269DD003876D2 /* UserInfoTableViewCell.swift in Sources */,
 				19214F3921C1371B0036049D /* ProfileViewController.swift in Sources */,
 				19214EE221C124D00036049D /* AppDelegate.swift in Sources */,
 			);
