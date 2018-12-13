@@ -24,6 +24,10 @@
 		19214F3921C1371B0036049D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19214F3821C1371B0036049D /* ProfileViewController.swift */; };
 		19BBBAA121C269DD003876D2 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBA9F21C269DD003876D2 /* UserInfoTableViewCell.swift */; };
 		19BBBAA221C269DD003876D2 /* UserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBAA021C269DD003876D2 /* UserInfoTableViewCell.xib */; };
+		19BBBAA621C2726F003876D2 /* SingleTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBAA421C2726F003876D2 /* SingleTextTableViewCell.swift */; };
+		19BBBAA721C2726F003876D2 /* SingleTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBAA521C2726F003876D2 /* SingleTextTableViewCell.xib */; };
+		19BBBAAA21C27DED003876D2 /* DoubleTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBAA821C27DED003876D2 /* DoubleTextTableViewCell.swift */; };
+		19BBBAAB21C27DED003876D2 /* DoubleTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBAA921C27DED003876D2 /* DoubleTextTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +112,10 @@
 		19214F3821C1371B0036049D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		19BBBA9F21C269DD003876D2 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
 		19BBBAA021C269DD003876D2 /* UserInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoTableViewCell.xib; sourceTree = "<group>"; };
+		19BBBAA421C2726F003876D2 /* SingleTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTextTableViewCell.swift; sourceTree = "<group>"; };
+		19BBBAA521C2726F003876D2 /* SingleTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleTextTableViewCell.xib; sourceTree = "<group>"; };
+		19BBBAA821C27DED003876D2 /* DoubleTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleTextTableViewCell.swift; sourceTree = "<group>"; };
+		19BBBAA921C27DED003876D2 /* DoubleTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoubleTextTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +233,10 @@
 			children = (
 				19BBBA9F21C269DD003876D2 /* UserInfoTableViewCell.swift */,
 				19BBBAA021C269DD003876D2 /* UserInfoTableViewCell.xib */,
+				19BBBAA421C2726F003876D2 /* SingleTextTableViewCell.swift */,
+				19BBBAA521C2726F003876D2 /* SingleTextTableViewCell.xib */,
+				19BBBAA821C27DED003876D2 /* DoubleTextTableViewCell.swift */,
+				19BBBAA921C27DED003876D2 /* DoubleTextTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -379,6 +391,8 @@
 			files = (
 				19BBBAA221C269DD003876D2 /* UserInfoTableViewCell.xib in Resources */,
 				19214EEC21C124D20036049D /* LaunchScreen.storyboard in Resources */,
+				19BBBAA721C2726F003876D2 /* SingleTextTableViewCell.xib in Resources */,
+				19BBBAAB21C27DED003876D2 /* DoubleTextTableViewCell.xib in Resources */,
 				19214EE921C124D20036049D /* Assets.xcassets in Resources */,
 				19214EE721C124D00036049D /* Main.storyboard in Resources */,
 			);
@@ -423,7 +437,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				19BBBAA121C269DD003876D2 /* UserInfoTableViewCell.swift in Sources */,
+				19BBBAAA21C27DED003876D2 /* DoubleTextTableViewCell.swift in Sources */,
 				19214F3921C1371B0036049D /* ProfileViewController.swift in Sources */,
+				19BBBAA621C2726F003876D2 /* SingleTextTableViewCell.swift in Sources */,
 				19214EE221C124D00036049D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
