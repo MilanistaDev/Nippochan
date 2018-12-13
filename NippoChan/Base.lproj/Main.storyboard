@@ -14,7 +14,7 @@
         <scene sceneID="poY-lp-eK7">
             <objects>
                 <navigationController id="y7V-XJ-ANj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="PROFILE" id="XUV-hx-TJm"/>
+                    <tabBarItem key="tabBarItem" title="PROFILE" image="ic_tab_profile" id="XUV-hx-TJm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="756-zs-mj7">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -37,7 +37,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iZ2-7B-YLO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="PROFILE" id="kT9-VF-jDQ"/>
+                    <tabBarItem key="tabBarItem" title="PROFILE" image="ic_tab_profile" id="kT9-VF-jDQ"/>
                     <navigationItem key="navigationItem" id="jXz-4t-Hl2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vz8-FX-RN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -54,7 +54,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xhV-Rw-Lxy"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="TIME LINE" id="gDL-ig-cyt"/>
+                    <tabBarItem key="tabBarItem" title="TIME LINE" image="ic_tab_timeline" id="gDL-ig-cyt"/>
                     <navigationItem key="navigationItem" id="x5d-jD-Qyt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tjq-0D-roh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -65,13 +65,13 @@
         <scene sceneID="0rt-hu-aHS">
             <objects>
                 <navigationController id="LT9-hj-s9C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="TIME LINE" id="YSY-lN-dUc"/>
+                    <tabBarItem key="tabBarItem" title="TIME LINE" image="ic_tab_timeline" id="YSY-lN-dUc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NF5-CR-TWG">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="hck-OZ-lvn" kind="relationship" relationship="rootViewController" id="2ZC-of-Rw7"/>
+                        <segue destination="hck-OZ-lvn" kind="relationship" relationship="rootViewController" id="gTQ-me-Wly"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBA-Uy-D0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -99,4 +99,8 @@
             <point key="canvasLocation" x="-258" y="-344"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_tab_profile" width="30" height="30"/>
+        <image name="ic_tab_timeline" width="30" height="30"/>
+    </resources>
 </document>
