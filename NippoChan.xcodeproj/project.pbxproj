@@ -172,11 +172,10 @@
 				19214EE121C124D00036049D /* AppDelegate.swift */,
 				19214F3821C1371B0036049D /* ProfileViewController.swift */,
 				19214EE521C124D00036049D /* Main.storyboard */,
+				19BBBAA321C2702B003876D2 /* View */,
 				19214EE821C124D20036049D /* Assets.xcassets */,
 				19214EEA21C124D20036049D /* LaunchScreen.storyboard */,
 				19214EED21C124D20036049D /* Info.plist */,
-				19BBBA9F21C269DD003876D2 /* UserInfoTableViewCell.swift */,
-				19BBBAA021C269DD003876D2 /* UserInfoTableViewCell.xib */,
 			);
 			path = NippoChan;
 			sourceTree = "<group>";
@@ -219,6 +218,15 @@
 				19214F2A21C12B570036049D /* Info.plist */,
 			);
 			path = "NippochanWatch Extension";
+			sourceTree = "<group>";
+		};
+		19BBBAA321C2702B003876D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				19BBBA9F21C269DD003876D2 /* UserInfoTableViewCell.swift */,
+				19BBBAA021C269DD003876D2 /* UserInfoTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
