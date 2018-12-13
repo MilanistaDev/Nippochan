@@ -34,11 +34,26 @@
                     <view key="view" contentMode="scaleToFill" id="fym-WX-dfL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UmT-XC-5t2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UmT-XC-5t2" firstAttribute="leading" secondItem="iZ2-7B-YLO" secondAttribute="leading" id="1te-FO-YvJ"/>
+                            <constraint firstItem="UmT-XC-5t2" firstAttribute="top" secondItem="iZ2-7B-YLO" secondAttribute="top" id="IEX-tK-nYs"/>
+                            <constraint firstItem="iZ2-7B-YLO" firstAttribute="bottom" secondItem="UmT-XC-5t2" secondAttribute="bottom" id="bjS-fP-VXY"/>
+                            <constraint firstItem="iZ2-7B-YLO" firstAttribute="trailing" secondItem="UmT-XC-5t2" secondAttribute="trailing" id="wpv-xV-BPI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iZ2-7B-YLO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="PROFILE" image="ic_tab_profile" id="kT9-VF-jDQ"/>
                     <navigationItem key="navigationItem" id="jXz-4t-Hl2"/>
+                    <connections>
+                        <outlet property="profileTableView" destination="UmT-XC-5t2" id="qvj-Cg-HPk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vz8-FX-RN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +66,28 @@
                     <view key="view" contentMode="scaleToFill" id="Q1a-EZ-dRB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_lock" translatesAutoresizingMaskIntoConstraints="NO" id="xx6-WW-rdR">
+                                <rect key="frame" x="157.5" y="243.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="1dQ-t0-z3N"/>
+                                    <constraint firstAttribute="height" constant="60" id="STS-fg-WIV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="私を解放してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGo-5f-3YY">
+                                <rect key="frame" x="111" y="335.5" width="153" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fGo-5f-3YY" firstAttribute="centerX" secondItem="Q1a-EZ-dRB" secondAttribute="centerX" id="H6z-Dd-Xfq"/>
+                            <constraint firstItem="xx6-WW-rdR" firstAttribute="centerX" secondItem="Q1a-EZ-dRB" secondAttribute="centerX" id="asF-de-O50"/>
+                            <constraint firstItem="fGo-5f-3YY" firstAttribute="top" secondItem="xx6-WW-rdR" secondAttribute="bottom" constant="32" id="etO-XO-YAZ"/>
+                            <constraint firstItem="xx6-WW-rdR" firstAttribute="centerY" secondItem="Q1a-EZ-dRB" secondAttribute="centerY" constant="-60" id="oy2-A8-8Jb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xhV-Rw-Lxy"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="TIME LINE" image="ic_tab_timeline" id="gDL-ig-cyt"/>
@@ -100,6 +136,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_lock" width="128" height="128"/>
         <image name="ic_tab_profile" width="30" height="30"/>
         <image name="ic_tab_timeline" width="30" height="30"/>
     </resources>
