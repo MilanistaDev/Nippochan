@@ -18,6 +18,7 @@ class UserInfoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.userImageView.layer.cornerRadius = self.userImageView.frame.width / 2
+        self.userImageView.layer.masksToBounds = true
         self.selectionStyle = .none
     }
 
