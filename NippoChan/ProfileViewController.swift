@@ -25,6 +25,11 @@ final class ProfileViewController: UIViewController {
         self.setUpTableView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.profileTableView.reloadData()
+    }
+
     fileprivate func setUpUI() {
         self.navigationItem.title = "PROFILE"
     }
@@ -43,6 +48,17 @@ final class ProfileViewController: UIViewController {
 }
 
 extension ProfileViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case CellTypeIndex.profile.rawValue:
+            let storyBoard = UIStoryboard(name: "EditProfile", bundle: nil)
+            let editProfileVC = storyBoard.instantiateInitialViewController()
+            self.navigationController?.pushViewController(editProfileVC!, animated: true)
+        default:
+            break
+        }
+    }
 
 }
 

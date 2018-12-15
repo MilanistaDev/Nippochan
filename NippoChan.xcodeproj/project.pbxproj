@@ -22,6 +22,9 @@
 		19214F2921C12B570036049D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19214F2821C12B570036049D /* Assets.xcassets */; };
 		19214F2D21C12B570036049D /* NippochanWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 19214F1121C12B550036049D /* NippochanWatch.app */; };
 		19214F3921C1371B0036049D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19214F3821C1371B0036049D /* ProfileViewController.swift */; };
+		1983536321C56ADC0096CEBC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983536221C56ADC0096CEBC /* EditProfileViewController.swift */; };
+		1983536521C56B3E0096CEBC /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1983536421C56B3E0096CEBC /* EditProfile.storyboard */; };
+		1983536721C582210096CEBC /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983536621C582210096CEBC /* ImageCache.swift */; };
 		19BBBAA121C269DD003876D2 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBA9F21C269DD003876D2 /* UserInfoTableViewCell.swift */; };
 		19BBBAA221C269DD003876D2 /* UserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBAA021C269DD003876D2 /* UserInfoTableViewCell.xib */; };
 		19BBBAA621C2726F003876D2 /* SingleTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBAA421C2726F003876D2 /* SingleTextTableViewCell.swift */; };
@@ -110,6 +113,9 @@
 		19214F2821C12B570036049D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19214F2A21C12B570036049D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19214F3821C1371B0036049D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1983536221C56ADC0096CEBC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		1983536421C56B3E0096CEBC /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
+		1983536621C582210096CEBC /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		19BBBA9F21C269DD003876D2 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
 		19BBBAA021C269DD003876D2 /* UserInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoTableViewCell.xib; sourceTree = "<group>"; };
 		19BBBAA421C2726F003876D2 /* SingleTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTextTableViewCell.swift; sourceTree = "<group>"; };
@@ -179,8 +185,11 @@
 			children = (
 				19214EE121C124D00036049D /* AppDelegate.swift */,
 				19214F3821C1371B0036049D /* ProfileViewController.swift */,
+				1983536221C56ADC0096CEBC /* EditProfileViewController.swift */,
 				19214EE521C124D00036049D /* Main.storyboard */,
+				1983536421C56B3E0096CEBC /* EditProfile.storyboard */,
 				19BBBAA321C2702B003876D2 /* View */,
+				1983536821C585FD0096CEBC /* Util */,
 				19214EE821C124D20036049D /* Assets.xcassets */,
 				19214EEA21C124D20036049D /* LaunchScreen.storyboard */,
 				19214EED21C124D20036049D /* Info.plist */,
@@ -226,6 +235,14 @@
 				19214F2A21C12B570036049D /* Info.plist */,
 			);
 			path = "NippochanWatch Extension";
+			sourceTree = "<group>";
+		};
+		1983536821C585FD0096CEBC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				1983536621C582210096CEBC /* ImageCache.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		19BBBAA321C2702B003876D2 /* View */ = {
@@ -390,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19BBBAA221C269DD003876D2 /* UserInfoTableViewCell.xib in Resources */,
+				1983536521C56B3E0096CEBC /* EditProfile.storyboard in Resources */,
 				19214EEC21C124D20036049D /* LaunchScreen.storyboard in Resources */,
 				19BBBAA721C2726F003876D2 /* SingleTextTableViewCell.xib in Resources */,
 				19BBBAAB21C27DED003876D2 /* DoubleTextTableViewCell.xib in Resources */,
@@ -438,8 +456,10 @@
 			files = (
 				19BBBAA121C269DD003876D2 /* UserInfoTableViewCell.swift in Sources */,
 				19BBBAAA21C27DED003876D2 /* DoubleTextTableViewCell.swift in Sources */,
+				1983536321C56ADC0096CEBC /* EditProfileViewController.swift in Sources */,
 				19214F3921C1371B0036049D /* ProfileViewController.swift in Sources */,
 				19BBBAA621C2726F003876D2 /* SingleTextTableViewCell.swift in Sources */,
+				1983536721C582210096CEBC /* ImageCache.swift in Sources */,
 				19214EE221C124D00036049D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
