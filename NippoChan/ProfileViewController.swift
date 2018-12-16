@@ -72,6 +72,15 @@ extension ProfileViewController: UITableViewDataSource {
         switch indexPath.row {
         case CellTypeIndex.profile.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! UserInfoTableViewCell
+            let userDefaults = UserDefaults.standard
+            let name = userDefaults.object(forKey: "ProfileName") as? String
+            cell.userName = name
+            let company = userDefaults.object(forKey: "ProfileCompany") as? String
+            cell.userCompany = company
+            let memberId = userDefaults.object(forKey: "ProfileMemberId") as? String
+            cell.userId = memberId
+            let imageUrl = userDefaults.object(forKey: "ProfileImageUrl") as? String
+            cell.imageUrl = imageUrl
             return cell
         case CellTypeIndex.slack.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SingleTextCell", for: indexPath) as! SingleTextTableViewCell

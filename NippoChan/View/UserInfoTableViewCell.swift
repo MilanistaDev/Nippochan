@@ -21,32 +21,61 @@ class UserInfoTableViewCell: UITableViewCell {
         self.userImageView.layer.cornerRadius = self.userImageView.frame.width / 2
         self.userImageView.layer.masksToBounds = true
         self.selectionStyle = .none
-        let userDefaults = UserDefaults.standard
-        let name = userDefaults.object(forKey: "ProfileName") as? String
-        self.userNameLabel.text = name ?? "Your Name"
-        let company = userDefaults.object(forKey: "ProfileCompany") as? String
-        self.userCampanyLabel.text = company ?? "Your Company"
-        if let memberId = userDefaults.object(forKey: "ProfileMemberId") as? String {
-            self.userIdLabel.text = "Member ID: " + memberId
-        } else { self.userIdLabel.text = "Member ID: XXX"}
-        if let imageUrl = userDefaults.object(forKey: "ProfileImageUrl") as? String {
-            if let cachedImage = imageCache.object(forKey: NSString(string: imageUrl)) {
-                self.userImageView.image = cachedImage
+    }
+
+    var userName: String? {
+        didSet {
+            if let userName = userName, userName.count != 0 {
+                self.userNameLabel.text = userName
             } else {
-                DispatchQueue.global(qos: .background).async {
-                    do {
-                        let imageData = try Data(contentsOf: URL(string: imageUrl)!)
-                        DispatchQueue.main.async {
-                            self.imageCache.setObject(UIImage(data: imageData)!,
-                                                      forKey: NSString(string: imageUrl))
-                            self.userImageView.image = UIImage(data: imageData)
-                        }
-                    } catch {
-                        DispatchQueue.main.async {
-                            self.userImageView.image = UIImage(named: "img_no_image")
+                self.userNameLabel.text = "Your Name"
+            }
+        }
+    }
+
+    var userCompany: String? {
+        didSet {
+            if let userCompany = userCompany, userCompany.count != 0 {
+                self.userCampanyLabel.text = userCompany
+            } else {
+                self.userCampanyLabel.text = "Your Company"
+            }
+        }
+    }
+
+    var userId: String? {
+        didSet {
+            if let userId = userId, userId.count != 0 {
+                self.userIdLabel.text = "Member ID: " + userId
+            } else {
+                self.userIdLabel.text = "Member ID: XXX"
+            }
+        }
+    }
+
+    var imageUrl: String? {
+        didSet {
+            if let imageUrl = imageUrl, imageUrl.count != 0 {
+                if let cachedImage = imageCache.object(forKey: NSString(string: imageUrl)) {
+                    self.userImageView.image = cachedImage
+                } else {
+                    DispatchQueue.global(qos: .background).async {
+                        do {
+                            let imageData = try Data(contentsOf: URL(string: imageUrl)!)
+                            DispatchQueue.main.async {
+                                self.imageCache.setObject(UIImage(data: imageData)!,
+                                                          forKey: NSString(string: imageUrl))
+                                self.userImageView.image = UIImage(data: imageData)
+                            }
+                        } catch {
+                            DispatchQueue.main.async {
+                                self.userImageView.image = UIImage(named: "img_no_image")
+                            }
                         }
                     }
                 }
+            } else {
+                self.userImageView.image = UIImage(named: "img_no_image")
             }
         }
     }
