@@ -55,6 +55,10 @@ extension ProfileViewController: UITableViewDelegate {
             let storyBoard = UIStoryboard(name: "EditProfile", bundle: nil)
             let editProfileVC = storyBoard.instantiateInitialViewController()
             self.navigationController?.pushViewController(editProfileVC!, animated: true)
+        case CellTypeIndex.slack.rawValue:
+            let storyBoard = UIStoryboard(name: "SlackInfo", bundle: nil)
+            let slackInfoVC = storyBoard.instantiateInitialViewController()
+            self.navigationController?.pushViewController(slackInfoVC!, animated: true)
         default:
             break
         }
