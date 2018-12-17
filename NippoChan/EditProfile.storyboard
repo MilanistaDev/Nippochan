@@ -31,21 +31,21 @@
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Company" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y2z-yM-wz4">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Company (Optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y2z-yM-wz4">
                                                 <rect key="frame" x="40" y="93" width="295" height="20"/>
                                                 <color key="tintColor" red="0.26348713039999999" green="0.58956122399999999" blue="0.30592468379999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Member ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBp-VF-ASp">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Member ID (Optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBp-VF-ASp">
                                                 <rect key="frame" x="40" y="154" width="295" height="20"/>
                                                 <color key="tintColor" red="0.26348713039999999" green="0.58956122399999999" blue="0.30592468379999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Profile Image URL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RzR-J6-s9p">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Profile Image URL (Optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RzR-J6-s9p">
                                                 <rect key="frame" x="40" y="215" width="295" height="20"/>
                                                 <color key="tintColor" red="0.26348713039999999" green="0.58956122399999999" blue="0.30592468379999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
