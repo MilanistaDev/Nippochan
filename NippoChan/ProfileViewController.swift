@@ -59,6 +59,10 @@ extension ProfileViewController: UITableViewDelegate {
             let storyBoard = UIStoryboard(name: "SlackInfo", bundle: nil)
             let slackInfoVC = storyBoard.instantiateInitialViewController()
             self.navigationController?.pushViewController(slackInfoVC!, animated: true)
+        case CellTypeIndex.watch.rawValue:
+            let storyBoard = UIStoryboard(name: "ShareDataWithWatch", bundle: nil)
+            let shareDataWithWatchVC = storyBoard.instantiateInitialViewController()
+            self.navigationController?.pushViewController(shareDataWithWatchVC!, animated: true)
         default:
             break
         }
