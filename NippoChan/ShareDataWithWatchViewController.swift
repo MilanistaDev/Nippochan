@@ -15,10 +15,13 @@ final class ShareDataWithWatchViewController: UIViewController {
     @IBOutlet weak var wordListTableView: UITableView!
     @IBOutlet weak var shareDataButton: UIButton!
 
+    var wordListArray: [String] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
         self.setUpTableView()
+        self.setUpWordList()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -29,12 +32,21 @@ final class ShareDataWithWatchViewController: UIViewController {
     fileprivate func setUpUI() {
         self.shareDataButton.layer.cornerRadius = 5.0
         self.shareDataButton.layer.masksToBounds = true
+        self.addWordTextField.delegate = self
     }
 
     fileprivate func setUpTableView() {
         self.wordListTableView.contentInset.bottom = 80.0
         self.wordListTableView.delegate = self
         self.wordListTableView.dataSource = self
+    }
+
+    private func setUpWordList() {
+        let userDefaults = UserDefaults.standard
+        if let wordList = userDefaults.array(forKey: "PostedWordsArray") as? [String] {
+            self.wordListArray = wordList
+            self.wordListTableView.reloadData()
+        }
     }
 
     private func displayViewWithAnimation(isHidden: Bool) {
@@ -47,8 +59,14 @@ final class ShareDataWithWatchViewController: UIViewController {
     }
 
     @IBAction func addWordAction(_ sender: Any) {
+        let userDefaults = UserDefaults.standard
+        if let addWord = self.addWordTextField.text, !addWord.isEmpty {
+            self.wordListArray.append(addWord)
+            userDefaults.set(self.wordListArray, forKey: "PostedWordsArray")
+            self.wordListTableView.reloadData()
+        }
+        self.addWordTextField.text = nil
         self.displayViewWithAnimation(isHidden: true)
-        self.wordListTableView.reloadData()
     }
 
     @IBAction func addNewWordAction(_ sender: Any) {
@@ -67,12 +85,20 @@ extension ShareDataWithWatchViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return self.wordListArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "wordCell", for: indexPath)
-        cell.textLabel?.text = indexPath.row.description
+        cell.textLabel?.text = self.wordListArray[indexPath.row]
         return cell
+    }
+}
+
+extension ShareDataWithWatchViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Close Keyboard
+        textField.resignFirstResponder()
+        return true
     }
 }
