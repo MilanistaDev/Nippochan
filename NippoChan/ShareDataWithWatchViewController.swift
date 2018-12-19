@@ -57,7 +57,7 @@ final class ShareDataWithWatchViewController: UIViewController {
     private func setUpWCSession() {
         if WCSession.isSupported() {
             self.session = WCSession.default
-            self.session.delegate = self
+            self.session.delegate = self    // 不要そうだがないとApple Watchと通信できない
             self.session.activate()
         }
     }
@@ -68,12 +68,9 @@ final class ShareDataWithWatchViewController: UIViewController {
     }
 
     private func displayViewWithAnimation(isHidden: Bool) {
-        UIView.animate(withDuration: 0.5,
-                       delay: 0.0,
-                       options: [],
-                       animations: { [weak self] in
-                        self?.addWordView.isHidden = isHidden
-            }, completion: nil)
+        UIView.animate(withDuration: 1.0) {
+            self.addWordView.isHidden = isHidden
+        }
     }
 
     @IBAction func addWordAction(_ sender: Any) {
@@ -104,7 +101,14 @@ final class ShareDataWithWatchViewController: UIViewController {
             alert.addAction(action)
             self.present(alert, animated: true, completion: nil)
         }) { (error: Error) in
-            print("エラーやし")
+            let alert = UIAlertController(title: "Error",
+                                          message: error.localizedDescription,
+                                          preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK",
+                                       style: .cancel,
+                                       handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }
@@ -117,7 +121,9 @@ extension ShareDataWithWatchViewController: UITableViewDelegate {
         sectionLabel.font = UIFont.setThemeFont(size: 15.0)
         sectionLabel.textColor = UIColor.white
         sectionLabel.sizeToFit()
-        let sectionView: UIView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: sectionLabel.frame.size.height+5.0))
+        let sectionView: UIView = UIView(frame: CGRect(x: 0.0, y: 0.0,
+                                                       width: self.view.frame.width,
+                                                       height: sectionLabel.frame.size.height+5.0))
         sectionView.addSubview(sectionLabel)
         sectionView.backgroundColor = UIColor.setThemeColor(alpha: 0.8)
         return sectionView
@@ -161,6 +167,7 @@ extension ShareDataWithWatchViewController: UITextFieldDelegate {
     }
 }
 
+// 不要そうだがないとApple Watchと通信できない
 extension ShareDataWithWatchViewController: WCSessionDelegate {
     func sessionDidBecomeInactive(_ session: WCSession) {
     }
