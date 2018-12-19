@@ -33,6 +33,8 @@ final class ShareDataWithWatchViewController: UIViewController {
         self.shareDataButton.layer.cornerRadius = 5.0
         self.shareDataButton.layer.masksToBounds = true
         self.addWordTextField.delegate = self
+        self.navigationItem.title = "SHARE DATA"
+        self.navigationItem.rightBarButtonItem = editButtonItem
     }
 
     fileprivate func setUpTableView() {
@@ -47,6 +49,11 @@ final class ShareDataWithWatchViewController: UIViewController {
             self.wordListArray = wordList
             self.wordListTableView.reloadData()
         }
+    }
+
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        self.wordListTableView.isEditing = editing
     }
 
     private func displayViewWithAnimation(isHidden: Bool) {
@@ -76,6 +83,29 @@ final class ShareDataWithWatchViewController: UIViewController {
 
 extension ShareDataWithWatchViewController: UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionLabel = UILabel(frame: CGRect(x: 20.0, y: 5.0, width: 0.0, height: 0.0))
+        sectionLabel.text = "Registered words"
+        sectionLabel.font = UIFont(name: "Futura-Medium", size: 15.0)
+        sectionLabel.textColor = UIColor.white
+        sectionLabel.sizeToFit()
+        let sectionView: UIView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: sectionLabel.frame.size.height+5.0))
+        sectionView.addSubview(sectionLabel)
+        sectionView.backgroundColor = UIColor(red: 0.0, green: 153.0/255.0, blue: 68.0/255.0, alpha: 0.8)
+        return sectionView
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        self.wordListArray.remove(at: indexPath.row)
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(self.wordListArray, forKey: "PostedWordsArray")
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        if tableView.isEditing { return .delete }
+        return .none
+    }
 }
 
 extension ShareDataWithWatchViewController: UITableViewDataSource {
