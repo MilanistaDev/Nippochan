@@ -44,8 +44,27 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0E-M2-sBm">
+                        <rect key="frame" x="175.5" y="12" width="49.5" height="27.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bI-b0-ING">
+                                <rect key="frame" x="12" y="4" width="25.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82674264909999995" green="0.17845441400000001" blue="0.1490606219" alpha="0.90137317868098155" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1bI-b0-ING" secondAttribute="bottom" constant="4" id="35t-B5-sws"/>
+                            <constraint firstItem="1bI-b0-ING" firstAttribute="leading" secondItem="W0E-M2-sBm" secondAttribute="leading" constant="12" id="LR5-dg-FM9"/>
+                            <constraint firstAttribute="trailing" secondItem="1bI-b0-ING" secondAttribute="trailing" constant="12" id="PBU-Ap-NLs"/>
+                            <constraint firstItem="1bI-b0-ING" firstAttribute="top" secondItem="W0E-M2-sBm" secondAttribute="top" constant="4" id="mzZ-Fn-IPp"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="W0E-M2-sBm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="6CI-NG-xI3"/>
                     <constraint firstItem="Gtt-5n-ceS" firstAttribute="top" secondItem="fXa-EQ-fVK" secondAttribute="bottom" constant="8" id="EBY-uP-IVX"/>
                     <constraint firstItem="fXa-EQ-fVK" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="I6E-aK-S5S"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Gtt-5n-ceS" secondAttribute="bottom" constant="16" id="MJQ-S2-qFS"/>
@@ -53,6 +72,7 @@
                     <constraint firstAttribute="trailing" secondItem="lhR-jh-2sF" secondAttribute="trailing" constant="20" id="TpH-oB-Xq8"/>
                     <constraint firstItem="6xf-SU-4kr" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="V1H-cI-gbu"/>
                     <constraint firstItem="lhR-jh-2sF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="V9a-zP-AuZ"/>
+                    <constraint firstItem="W0E-M2-sBm" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="40" id="YJQ-v8-v6S"/>
                     <constraint firstItem="fXa-EQ-fVK" firstAttribute="top" secondItem="lhR-jh-2sF" secondAttribute="bottom" constant="4" id="gWO-gD-8Mo"/>
                     <constraint firstItem="Gtt-5n-ceS" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="qHc-UP-wxn"/>
                     <constraint firstItem="6xf-SU-4kr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="zuH-LB-HUU"/>
@@ -60,6 +80,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="editGuideView" destination="W0E-M2-sBm" id="uAC-xR-QNM"/>
                 <outlet property="userCampanyLabel" destination="fXa-EQ-fVK" id="uav-Wo-9SF"/>
                 <outlet property="userIdLabel" destination="Gtt-5n-ceS" id="vsw-MH-RNg"/>
                 <outlet property="userImageView" destination="6xf-SU-4kr" id="wyN-Jz-Ljm"/>

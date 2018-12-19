@@ -10,6 +10,7 @@ import UIKit
 
 class UserInfoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var editGuideView: UIView!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userCampanyLabel: UILabel!
@@ -18,7 +19,8 @@ class UserInfoTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.userImageView.layer.cornerRadius = self.userImageView.frame.width / 2
+        self.editGuideView.layer.cornerRadius = self.editGuideView.frame.height / 2
+        self.userImageView.layer.cornerRadius = self.userImageView.frame.height / 2
         self.userImageView.layer.masksToBounds = true
         self.selectionStyle = .none
     }
@@ -27,8 +29,10 @@ class UserInfoTableViewCell: UITableViewCell {
         didSet {
             if let userName = userName, userName.count != 0 {
                 self.userNameLabel.text = userName
+                self.editGuideView.isHidden = true
             } else {
                 self.userNameLabel.text = "Your Name"
+                self.editGuideView.isHidden = false
             }
         }
     }
