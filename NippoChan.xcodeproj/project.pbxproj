@@ -27,6 +27,8 @@
 		1983536321C56ADC0096CEBC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983536221C56ADC0096CEBC /* EditProfileViewController.swift */; };
 		1983536521C56B3E0096CEBC /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1983536421C56B3E0096CEBC /* EditProfile.storyboard */; };
 		1983536721C582210096CEBC /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983536621C582210096CEBC /* ImageCache.swift */; };
+		198A48D321C9F7B700387C53 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198A48D221C9F7B700387C53 /* UIFont+Extension.swift */; };
+		198A48D521C9F9F500387C53 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198A48D421C9F9F500387C53 /* UIColor+Extension.swift */; };
 		19BBBAA121C269DD003876D2 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBA9F21C269DD003876D2 /* UserInfoTableViewCell.swift */; };
 		19BBBAA221C269DD003876D2 /* UserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBAA021C269DD003876D2 /* UserInfoTableViewCell.xib */; };
 		19BBBAA621C2726F003876D2 /* SingleTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBAA421C2726F003876D2 /* SingleTextTableViewCell.swift */; };
@@ -122,6 +124,8 @@
 		1983536221C56ADC0096CEBC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		1983536421C56B3E0096CEBC /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		1983536621C582210096CEBC /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		198A48D221C9F7B700387C53 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		198A48D421C9F9F500387C53 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		19BBBA9F21C269DD003876D2 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
 		19BBBAA021C269DD003876D2 /* UserInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoTableViewCell.xib; sourceTree = "<group>"; };
 		19BBBAA421C2726F003876D2 /* SingleTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTextTableViewCell.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 				19771F7021C7C5BD00DC0C41 /* ShareDataWithWatch.storyboard */,
 				19BBBAA321C2702B003876D2 /* View */,
 				1983536821C585FD0096CEBC /* Util */,
+				198A48D121C9F79A00387C53 /* Extension */,
 				19214EE821C124D20036049D /* Assets.xcassets */,
 				19214EEA21C124D20036049D /* LaunchScreen.storyboard */,
 				19214EED21C124D20036049D /* Info.plist */,
@@ -255,6 +260,15 @@
 				1983536621C582210096CEBC /* ImageCache.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		198A48D121C9F79A00387C53 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				198A48D221C9F7B700387C53 /* UIFont+Extension.swift */,
+				198A48D421C9F9F500387C53 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		19BBBAA321C2702B003876D2 /* View */ = {
@@ -471,11 +485,13 @@
 				19BBBAA121C269DD003876D2 /* UserInfoTableViewCell.swift in Sources */,
 				19EC801721C6EC9900AC9A08 /* SlackInfoViewController.swift in Sources */,
 				19BBBAAA21C27DED003876D2 /* DoubleTextTableViewCell.swift in Sources */,
+				198A48D521C9F9F500387C53 /* UIColor+Extension.swift in Sources */,
 				1983536321C56ADC0096CEBC /* EditProfileViewController.swift in Sources */,
 				19214F3921C1371B0036049D /* ProfileViewController.swift in Sources */,
 				19771F6F21C7C59800DC0C41 /* ShareDataWithWatchViewController.swift in Sources */,
 				19BBBAA621C2726F003876D2 /* SingleTextTableViewCell.swift in Sources */,
 				1983536721C582210096CEBC /* ImageCache.swift in Sources */,
+				198A48D321C9F7B700387C53 /* UIFont+Extension.swift in Sources */,
 				19214EE221C124D00036049D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

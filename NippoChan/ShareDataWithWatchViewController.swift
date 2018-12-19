@@ -86,12 +86,12 @@ extension ShareDataWithWatchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let sectionLabel = UILabel(frame: CGRect(x: 20.0, y: 5.0, width: 0.0, height: 0.0))
         sectionLabel.text = "Registered words"
-        sectionLabel.font = UIFont(name: "Futura-Medium", size: 15.0)
+        sectionLabel.font = UIFont.setThemeFont(size: 15.0)
         sectionLabel.textColor = UIColor.white
         sectionLabel.sizeToFit()
         let sectionView: UIView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: sectionLabel.frame.size.height+5.0))
         sectionView.addSubview(sectionLabel)
-        sectionView.backgroundColor = UIColor(red: 0.0, green: 153.0/255.0, blue: 68.0/255.0, alpha: 0.8)
+        sectionView.backgroundColor = UIColor.setThemeColor(alpha: 0.8)
         return sectionView
     }
 
