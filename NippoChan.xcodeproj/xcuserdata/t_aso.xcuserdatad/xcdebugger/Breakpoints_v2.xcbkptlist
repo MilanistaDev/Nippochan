@@ -10,12 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NippoChan/ShareDataWithWatchViewController.swift"
-            timestampString = "566905126.778935"
+            timestampString = "566916085.835851"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "displayViewWithAnimation(isHidden:)"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "shareDataWithWatchAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NippoChan/ShareDataWithWatchViewController.swift"
+            timestampString = "566916085.83629"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "shareDataWithWatchAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

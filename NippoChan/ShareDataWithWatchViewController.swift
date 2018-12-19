@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 final class ShareDataWithWatchViewController: UIViewController {
 
@@ -15,6 +16,7 @@ final class ShareDataWithWatchViewController: UIViewController {
     @IBOutlet weak var wordListTableView: UITableView!
     @IBOutlet weak var shareDataButton: UIButton!
 
+    var session = WCSession.default
     fileprivate var wordListArray: [String] = []
 
     override func viewDidLoad() {
@@ -22,6 +24,7 @@ final class ShareDataWithWatchViewController: UIViewController {
         self.setUpUI()
         self.setUpTableView()
         self.setUpWordList()
+        self.setUpWCSession()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -48,6 +51,14 @@ final class ShareDataWithWatchViewController: UIViewController {
         if let wordList = userDefaults.array(forKey: UserDefaultsKey.postWordsArray) as? [String] {
             self.wordListArray = wordList
             self.wordListTableView.reloadData()
+        }
+    }
+
+    private func setUpWCSession() {
+        if WCSession.isSupported() {
+            self.session = WCSession.default
+            self.session.delegate = self
+            self.session.activate()
         }
     }
 
@@ -78,6 +89,23 @@ final class ShareDataWithWatchViewController: UIViewController {
 
     @IBAction func addNewWordAction(_ sender: Any) {
         self.displayViewWithAnimation(isHidden: false)
+    }
+
+    @IBAction func shareDataWithWatchAction(_ sender: Any) {
+
+        let dic = ["A": "A"]
+        self.session.sendMessage(dic, replyHandler: { (replyDic) in
+            let alert = UIAlertController(title: replyDic["replyStatus"] as? String ?? "?",
+                                          message: "Successfully sent necessary data to Apple Watch.",
+                                          preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK",
+                                       style: .cancel,
+                                       handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }) { (error: Error) in
+            print("エラーやし")
+        }
     }
 }
 
@@ -130,5 +158,16 @@ extension ShareDataWithWatchViewController: UITextFieldDelegate {
         // Close Keyboard
         textField.resignFirstResponder()
         return true
+    }
+}
+
+extension ShareDataWithWatchViewController: WCSessionDelegate {
+    func sessionDidBecomeInactive(_ session: WCSession) {
+    }
+
+    func sessionDidDeactivate(_ session: WCSession) {
+    }
+
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
     }
 }

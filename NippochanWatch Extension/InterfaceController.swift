@@ -8,9 +8,11 @@
 
 import WatchKit
 import Foundation
-
+import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
+
+    var session = WCSession.default
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -21,6 +23,7 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        self.setUpWCSession()
     }
     
     override func didDeactivate() {
@@ -28,4 +31,22 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    private func setUpWCSession() {
+        if WCSession.isSupported() {
+            self.session = WCSession.default
+            self.session.delegate = self
+            self.session.activate()
+        }
+    }
+}
+
+extension InterfaceController: WCSessionDelegate {
+
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        let replyDic = ["replyStatus": "Success"]
+        replyHandler(replyDic)
+    }
 }
