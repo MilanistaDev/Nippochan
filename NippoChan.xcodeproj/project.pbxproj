@@ -29,6 +29,7 @@
 		1983536721C582210096CEBC /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983536621C582210096CEBC /* ImageCache.swift */; };
 		198A48D321C9F7B700387C53 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198A48D221C9F7B700387C53 /* UIFont+Extension.swift */; };
 		198A48D521C9F9F500387C53 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198A48D421C9F9F500387C53 /* UIColor+Extension.swift */; };
+		198A48D721CA397500387C53 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198A48D621CA397500387C53 /* Const.swift */; };
 		19BBBAA121C269DD003876D2 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBA9F21C269DD003876D2 /* UserInfoTableViewCell.swift */; };
 		19BBBAA221C269DD003876D2 /* UserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBAA021C269DD003876D2 /* UserInfoTableViewCell.xib */; };
 		19BBBAA621C2726F003876D2 /* SingleTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBAA421C2726F003876D2 /* SingleTextTableViewCell.swift */; };
@@ -126,6 +127,7 @@
 		1983536621C582210096CEBC /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		198A48D221C9F7B700387C53 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		198A48D421C9F9F500387C53 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		198A48D621CA397500387C53 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		19BBBA9F21C269DD003876D2 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
 		19BBBAA021C269DD003876D2 /* UserInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoTableViewCell.xib; sourceTree = "<group>"; };
 		19BBBAA421C2726F003876D2 /* SingleTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTextTableViewCell.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				1983536621C582210096CEBC /* ImageCache.swift */,
+				198A48D621CA397500387C53 /* Const.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				19BBBAAA21C27DED003876D2 /* DoubleTextTableViewCell.swift in Sources */,
 				198A48D521C9F9F500387C53 /* UIColor+Extension.swift in Sources */,
 				1983536321C56ADC0096CEBC /* EditProfileViewController.swift in Sources */,
+				198A48D721CA397500387C53 /* Const.swift in Sources */,
 				19214F3921C1371B0036049D /* ProfileViewController.swift in Sources */,
 				19771F6F21C7C59800DC0C41 /* ShareDataWithWatchViewController.swift in Sources */,
 				19BBBAA621C2726F003876D2 /* SingleTextTableViewCell.swift in Sources */,

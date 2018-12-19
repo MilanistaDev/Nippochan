@@ -17,7 +17,7 @@ final class EditProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "EDIT PROFILE"
+        self.navigationItem.title = NaviTitle.editProfile
         self.setProfileData()
         self.nameTextField.delegate = self
         self.companyTextField.delegate = self
@@ -28,22 +28,18 @@ final class EditProfileViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         let userDefaults = UserDefaults.standard
-        userDefaults.set(self.nameTextField.text, forKey: "ProfileName")
-        userDefaults.set(self.companyTextField.text, forKey: "ProfileCompany")
-        userDefaults.set(self.memberIdTextField.text, forKey: "ProfileMemberId")
-        userDefaults.set(self.imageUrlTextFiled.text, forKey: "ProfileImageUrl")
+        userDefaults.set(self.nameTextField.text, forKey: UserDefaultsKey.Profile.name)
+        userDefaults.set(self.companyTextField.text, forKey: UserDefaultsKey.Profile.company)
+        userDefaults.set(self.memberIdTextField.text, forKey: UserDefaultsKey.Profile.memId)
+        userDefaults.set(self.imageUrlTextFiled.text, forKey: UserDefaultsKey.Profile.imageUrl)
     }
 
     private func setProfileData() {
         let userDefaults = UserDefaults.standard
-        let name = userDefaults.object(forKey: "ProfileName") as? String
-        self.nameTextField.text = name ?? ""
-        let company = userDefaults.object(forKey: "ProfileCompany") as? String
-        self.companyTextField.text = company ?? ""
-        let memberId = userDefaults.object(forKey: "ProfileMemberId") as? String
-        self.memberIdTextField.text = memberId ?? ""
-        let imageUrl = userDefaults.object(forKey: "ProfileImageUrl") as? String
-        self.imageUrlTextFiled.text = imageUrl ?? ""
+        self.nameTextField.text = userDefaults.object(forKey: UserDefaultsKey.Profile.name) as? String ?? ""
+        self.companyTextField.text = userDefaults.object(forKey: UserDefaultsKey.Profile.company) as? String ?? ""
+        self.memberIdTextField.text = userDefaults.object(forKey: UserDefaultsKey.Profile.memId) as? String ?? ""
+        self.imageUrlTextFiled.text = userDefaults.object(forKey: UserDefaultsKey.Profile.imageUrl) as? String ?? ""
     }
 }
 

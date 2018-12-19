@@ -15,7 +15,7 @@ final class ShareDataWithWatchViewController: UIViewController {
     @IBOutlet weak var wordListTableView: UITableView!
     @IBOutlet weak var shareDataButton: UIButton!
 
-    var wordListArray: [String] = []
+    fileprivate var wordListArray: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ final class ShareDataWithWatchViewController: UIViewController {
         self.shareDataButton.layer.cornerRadius = 5.0
         self.shareDataButton.layer.masksToBounds = true
         self.addWordTextField.delegate = self
-        self.navigationItem.title = "SHARE DATA"
+        self.navigationItem.title = NaviTitle.shareData
         self.navigationItem.rightBarButtonItem = editButtonItem
     }
 
@@ -45,7 +45,7 @@ final class ShareDataWithWatchViewController: UIViewController {
 
     private func setUpWordList() {
         let userDefaults = UserDefaults.standard
-        if let wordList = userDefaults.array(forKey: "PostedWordsArray") as? [String] {
+        if let wordList = userDefaults.array(forKey: UserDefaultsKey.postWordsArray) as? [String] {
             self.wordListArray = wordList
             self.wordListTableView.reloadData()
         }
@@ -69,7 +69,7 @@ final class ShareDataWithWatchViewController: UIViewController {
         let userDefaults = UserDefaults.standard
         if let addWord = self.addWordTextField.text, !addWord.isEmpty {
             self.wordListArray.append(addWord)
-            userDefaults.set(self.wordListArray, forKey: "PostedWordsArray")
+            userDefaults.set(self.wordListArray, forKey: UserDefaultsKey.postWordsArray)
             self.wordListTableView.reloadData()
         }
         self.addWordTextField.text = nil
@@ -98,7 +98,7 @@ extension ShareDataWithWatchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         self.wordListArray.remove(at: indexPath.row)
         let userDefaults = UserDefaults.standard
-        userDefaults.set(self.wordListArray, forKey: "PostedWordsArray")
+        userDefaults.set(self.wordListArray, forKey: UserDefaultsKey.postWordsArray)
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 

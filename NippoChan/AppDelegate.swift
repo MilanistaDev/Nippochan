@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             [NSAttributedString.Key.foregroundColor: UIColor.white,
              NSAttributedString.Key.font: UIFont(name: "Futura-Medium", size: 15.0)!],
             for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes(
+            [NSAttributedString.Key.font: UIFont(name: "Futura-Medium", size: 10.0)!],
+            for: .normal)
         return true
     }
 

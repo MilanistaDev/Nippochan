@@ -26,13 +26,13 @@ final class SlackInfoViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         let userDefaults = UserDefaults.standard
-        userDefaults.set(self.webhookUrlTextField.text, forKey: "SlackWebhookUrl")
-        userDefaults.set(self.authorLinkTextFeild.text, forKey: "SlackAuthorLink")
-        userDefaults.set(self.favoriteColorTextField.text, forKey: "SlackFavoriteColor")
+        userDefaults.set(self.webhookUrlTextField.text, forKey: UserDefaultsKey.Slack.webhookUrl)
+        userDefaults.set(self.authorLinkTextFeild.text, forKey: UserDefaultsKey.Slack.authorLink)
+        userDefaults.set(self.favoriteColorTextField.text, forKey: UserDefaultsKey.Slack.favoriteColor)
     }
 
     fileprivate func setUpUI() {
-        self.navigationItem.title = "SLACK SETTINGS"
+        self.navigationItem.title = NaviTitle.slackSettings
         self.bannerIconImageView.layer.cornerRadius = 10.0
         self.bannerIconImageView.layer.masksToBounds = true
         self.bannerDlBaseView.layer.cornerRadius = 12.0
@@ -44,24 +44,21 @@ final class SlackInfoViewController: UIViewController {
 
     private func setSlackInfoData() {
         let userDefaults = UserDefaults.standard
-        let webhookUrl = userDefaults.object(forKey: "SlackWebhookUrl") as? String
-        self.webhookUrlTextField.text = webhookUrl ?? ""
-        let authorLink = userDefaults.object(forKey: "SlackAuthorLink") as? String
-        self.authorLinkTextFeild.text = authorLink ?? ""
-        let favoriteColor = userDefaults.object(forKey: "SlackFavoriteColor") as? String
-        self.favoriteColorTextField.text = favoriteColor ?? ""
+        self.webhookUrlTextField.text = userDefaults.object(forKey: UserDefaultsKey.Slack.webhookUrl) as? String ?? ""
+        self.authorLinkTextFeild.text = userDefaults.object(forKey: UserDefaultsKey.Slack.authorLink) as? String ?? ""
+        self.favoriteColorTextField.text = userDefaults.object(forKey: UserDefaultsKey.Slack.favoriteColor) as? String ?? ""
     }
 
     // MARK: - Button Action
 
     @IBAction func openWebhookInfoAction(_ sender: Any) {
-        let webHookInfoUrl = URL(string: "https://yumemi.slack.com/apps/new/A0F7XDUAZ-incoming-webhooks")
+        let webHookInfoUrl = URL(string: URLLink.slackWebhook)
         let safariVC = SFSafariViewController(url: webHookInfoUrl!)
         self.present(safariVC, animated: true, completion: nil)
     }
 
     @IBAction func bannerTapAction(_ sender: Any) {
-        let storeUrl = URL(string: "https://itunes.apple.com/jp/app/color-convertor/id1203567143?mt=8")
+        let storeUrl = URL(string: URLLink.colorConv)
         let safariVC = SFSafariViewController(url: storeUrl!)
         self.present(safariVC, animated: true, completion: nil)
     }

@@ -31,7 +31,7 @@ final class ProfileViewController: UIViewController {
     }
 
     fileprivate func setUpUI() {
-        self.navigationItem.title = "PROFILE"
+        self.navigationItem.title = NaviTitle.profile
     }
 
     fileprivate func setUpTableView() {
@@ -81,14 +81,10 @@ extension ProfileViewController: UITableViewDataSource {
         case CellTypeIndex.profile.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! UserInfoTableViewCell
             let userDefaults = UserDefaults.standard
-            let name = userDefaults.object(forKey: "ProfileName") as? String
-            cell.userName = name
-            let company = userDefaults.object(forKey: "ProfileCompany") as? String
-            cell.userCompany = company
-            let memberId = userDefaults.object(forKey: "ProfileMemberId") as? String
-            cell.userId = memberId
-            let imageUrl = userDefaults.object(forKey: "ProfileImageUrl") as? String
-            cell.imageUrl = imageUrl
+            cell.userName = userDefaults.object(forKey: UserDefaultsKey.Profile.name) as? String
+            cell.userCompany = userDefaults.object(forKey: UserDefaultsKey.Profile.company) as? String
+            cell.userId = userDefaults.object(forKey: UserDefaultsKey.Profile.memId) as? String
+            cell.imageUrl = userDefaults.object(forKey: UserDefaultsKey.Profile.imageUrl) as? String
             return cell
         case CellTypeIndex.slack.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SingleTextCell", for: indexPath) as! SingleTextTableViewCell
@@ -101,8 +97,7 @@ extension ProfileViewController: UITableViewDataSource {
         case CellTypeIndex.version.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DoubleTextCell", for: indexPath) as! DoubleTextTableViewCell
             cell.cellTextLabel.text = "Version"
-            let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
-            cell.cellSubTextLabel.text = version ?? ""
+            cell.cellSubTextLabel.text = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
             return cell
         default:
             let cell = UITableViewCell()
