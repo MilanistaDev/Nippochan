@@ -22,6 +22,7 @@
 		19214F2921C12B570036049D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19214F2821C12B570036049D /* Assets.xcassets */; };
 		19214F2D21C12B570036049D /* NippochanWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 19214F1121C12B550036049D /* NippochanWatch.app */; };
 		19214F3921C1371B0036049D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19214F3821C1371B0036049D /* ProfileViewController.swift */; };
+		1964F13C21CCFF1E00B9C02B /* GenerateShareDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1964F13B21CCFF1E00B9C02B /* GenerateShareDataManager.swift */; };
 		19771F6F21C7C59800DC0C41 /* ShareDataWithWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19771F6E21C7C59800DC0C41 /* ShareDataWithWatchViewController.swift */; };
 		19771F7121C7C5BD00DC0C41 /* ShareDataWithWatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19771F7021C7C5BD00DC0C41 /* ShareDataWithWatch.storyboard */; };
 		1983536321C56ADC0096CEBC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983536221C56ADC0096CEBC /* EditProfileViewController.swift */; };
@@ -120,6 +121,7 @@
 		19214F2821C12B570036049D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19214F2A21C12B570036049D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19214F3821C1371B0036049D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1964F13B21CCFF1E00B9C02B /* GenerateShareDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateShareDataManager.swift; sourceTree = "<group>"; };
 		19771F6E21C7C59800DC0C41 /* ShareDataWithWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataWithWatchViewController.swift; sourceTree = "<group>"; };
 		19771F7021C7C5BD00DC0C41 /* ShareDataWithWatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShareDataWithWatch.storyboard; sourceTree = "<group>"; };
 		1983536221C56ADC0096CEBC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			children = (
 				1983536621C582210096CEBC /* ImageCache.swift */,
 				198A48D621CA397500387C53 /* Const.swift */,
+				1964F13B21CCFF1E00B9C02B /* GenerateShareDataManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				19EC801721C6EC9900AC9A08 /* SlackInfoViewController.swift in Sources */,
 				19BBBAAA21C27DED003876D2 /* DoubleTextTableViewCell.swift in Sources */,
 				198A48D521C9F9F500387C53 /* UIColor+Extension.swift in Sources */,
+				1964F13C21CCFF1E00B9C02B /* GenerateShareDataManager.swift in Sources */,
 				1983536321C56ADC0096CEBC /* EditProfileViewController.swift in Sources */,
 				198A48D721CA397500387C53 /* Const.swift in Sources */,
 				19214F3921C1371B0036049D /* ProfileViewController.swift in Sources */,

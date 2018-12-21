@@ -89,27 +89,32 @@ final class ShareDataWithWatchViewController: UIViewController {
     }
 
     @IBAction func shareDataWithWatchAction(_ sender: Any) {
-
-        let dic = ["A": "A"]
-        self.session.sendMessage(dic, replyHandler: { (replyDic) in
-            let alert = UIAlertController(title: replyDic["replyStatus"] as? String ?? "?",
-                                          message: "Successfully sent necessary data to Apple Watch.",
-                                          preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK",
-                                       style: .cancel,
-                                       handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
-        }) { (error: Error) in
-            let alert = UIAlertController(title: "Error",
-                                          message: error.localizedDescription,
-                                          preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK",
-                                       style: .cancel,
-                                       handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
+        // 必須の情報が登録されているか
+        if !GenerateShareDataManager.checkDataStatus() {
+            self.showAlertDialog(title: "Data Error",
+                                 message: "Required data is not registered.\nPlease check the data of Name, Webhook URL and words you want to post.")
+            return
         }
+        // Apple Watch へ送るDictionary
+        let dic = GenerateShareDataManager.generateShareDataDic()
+
+        self.session.sendMessage(dic, replyHandler: { (replyDic) in
+            self.showAlertDialog(title: replyDic["replyStatus"] as? String ?? "?",
+                                 message: "Successfully sent necessary data to Apple Watch.")
+        }) { (error: Error) in
+            self.showAlertDialog(title: "Error", message: error.localizedDescription)
+        }
+    }
+
+    private func showAlertDialog(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK",
+                                   style: .cancel,
+                                   handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
