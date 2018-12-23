@@ -17,6 +17,7 @@ class InterfaceController: WKInterfaceController {
 
     var session = WCSession.default
     var pickerArray: [WKPickerItem] = []
+    var selectedWord: String?
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -28,6 +29,10 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         self.setUpWCSession()
+        let userDefaults = UserDefaults.standard
+        if let wordsArray = userDefaults.object(forKey: UserDefaultsKey.postWordsArray) as? [String] {
+            self.generatePickerData(wordsArray: wordsArray)
+        }
     }
     
     override func didDeactivate() {
@@ -54,7 +59,8 @@ class InterfaceController: WKInterfaceController {
 
     @IBAction func selectWordAction(_ value: Int) {
         self.sendButton.setEnabled(true)
-        self.sendButton.setTitle(self.pickerArray[value].title)
+        self.selectedWord = self.pickerArray[value].title
+        self.sendButton.setTitle(self.selectedWord)
     }
 
     @IBAction func sendAction() {
@@ -69,9 +75,12 @@ extension InterfaceController: WCSessionDelegate {
     }
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        // Apple Storeの不揮発領域にデータを保存
+        StoreDataManager.storeData(receivedData: message)
+        // ピッカーのデータを生成
         let wordsArray: [String] = message["wordsArray"] as! [String]
         self.generatePickerData(wordsArray: wordsArray)
-        let replyDic = ["replyStatus": "Success"]
-        replyHandler(replyDic)
+        // iPhoneに返却
+        replyHandler(["replyStatus": "Success"])
     }
 }
