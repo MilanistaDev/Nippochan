@@ -21,17 +21,23 @@ class PostWordsManager {
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        let params: [String: Any] = [
-            "attachments": [
-                "color": color,
-                "author_name": authorName,
-                "author_link": authorLink,
-                "author_icon": authorIcon,
-                "text": word,
-                "footer": "via 日報ちゃん",
-                "footer_icon": URLLink.appIcon
-            ]
-        ]
+        // Slackへ送信するJSONを作成
+        var attachmentsDic = Dictionary<String, String>()
+        attachmentsDic["color"] = color
+        attachmentsDic["author_name"] = authorName
+        attachmentsDic["author_link"] = authorLink
+        attachmentsDic["author_icon"] = authorIcon
+        attachmentsDic["text"] = word
+        attachmentsDic["footer"] = "via 日報ちゃん"
+        attachmentsDic["footer_icon"] = URLLink.appIcon
+
+        var attachments = Array<Any>()
+        attachments.append(attachmentsDic)
+
+        var params = Dictionary<String, Any>()
+        params["username"] = "ん？Apple Watchからメッセージが・・・"
+        params["icon_emoji"] = ":face_with_monocle:"
+        params["attachments"] = attachments
 
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
@@ -58,7 +64,7 @@ class PostWordsManager {
                 // print(data)
             } else {
                 NotificationCenter.default.post(name: Notification.Name("sentFailed"), object: nil)
-                 //print(response.statusCode)
+                 print(response.statusCode)
             }
         }
         task.resume()

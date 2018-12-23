@@ -42,6 +42,7 @@
 		19BBBAAB21C27DED003876D2 /* DoubleTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBAA921C27DED003876D2 /* DoubleTextTableViewCell.xib */; };
 		19EC801721C6EC9900AC9A08 /* SlackInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC801621C6EC9900AC9A08 /* SlackInfoViewController.swift */; };
 		19EC801921C6ECAA00AC9A08 /* SlackInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EC801821C6ECAA00AC9A08 /* SlackInfo.storyboard */; };
+		19ECC64821CFB4ED0046D199 /* PostWordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19707C8C21CF54AF00C79D13 /* PostWordsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -508,6 +509,7 @@
 				1983536721C582210096CEBC /* ImageCache.swift in Sources */,
 				198A48D321C9F7B700387C53 /* UIFont+Extension.swift in Sources */,
 				19214EE221C124D00036049D /* AppDelegate.swift in Sources */,
+				19ECC64821CFB4ED0046D199 /* PostWordsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
