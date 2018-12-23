@@ -25,6 +25,7 @@
 		1964F13C21CCFF1E00B9C02B /* GenerateShareDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1964F13B21CCFF1E00B9C02B /* GenerateShareDataManager.swift */; };
 		19707C8A21CE89AF00C79D13 /* StoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19707C8921CE89AF00C79D13 /* StoreDataManager.swift */; };
 		19707C8B21CF439300C79D13 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198A48D621CA397500387C53 /* Const.swift */; };
+		19707C8D21CF54AF00C79D13 /* PostWordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19707C8C21CF54AF00C79D13 /* PostWordsManager.swift */; };
 		19771F6F21C7C59800DC0C41 /* ShareDataWithWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19771F6E21C7C59800DC0C41 /* ShareDataWithWatchViewController.swift */; };
 		19771F7121C7C5BD00DC0C41 /* ShareDataWithWatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19771F7021C7C5BD00DC0C41 /* ShareDataWithWatch.storyboard */; };
 		1983536321C56ADC0096CEBC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983536221C56ADC0096CEBC /* EditProfileViewController.swift */; };
@@ -125,6 +126,7 @@
 		19214F3821C1371B0036049D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1964F13B21CCFF1E00B9C02B /* GenerateShareDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateShareDataManager.swift; sourceTree = "<group>"; };
 		19707C8921CE89AF00C79D13 /* StoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDataManager.swift; sourceTree = "<group>"; };
+		19707C8C21CF54AF00C79D13 /* PostWordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWordsManager.swift; sourceTree = "<group>"; };
 		19771F6E21C7C59800DC0C41 /* ShareDataWithWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDataWithWatchViewController.swift; sourceTree = "<group>"; };
 		19771F7021C7C5BD00DC0C41 /* ShareDataWithWatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShareDataWithWatch.storyboard; sourceTree = "<group>"; };
 		1983536221C56ADC0096CEBC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			children = (
 				19214F2221C12B570036049D /* InterfaceController.swift */,
 				19707C8921CE89AF00C79D13 /* StoreDataManager.swift */,
+				19707C8C21CF54AF00C79D13 /* PostWordsManager.swift */,
 				19214F2421C12B570036049D /* ExtensionDelegate.swift */,
 				19214F2621C12B570036049D /* ComplicationController.swift */,
 				19214F2821C12B570036049D /* Assets.xcassets */,
@@ -529,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19214F2521C12B570036049D /* ExtensionDelegate.swift in Sources */,
+				19707C8D21CF54AF00C79D13 /* PostWordsManager.swift in Sources */,
 				19214F2321C12B570036049D /* InterfaceController.swift in Sources */,
 				19214F2721C12B570036049D /* ComplicationController.swift in Sources */,
 				19707C8A21CE89AF00C79D13 /* StoreDataManager.swift in Sources */,

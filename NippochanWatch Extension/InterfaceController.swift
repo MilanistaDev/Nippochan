@@ -33,6 +33,14 @@ class InterfaceController: WKInterfaceController {
         if let wordsArray = userDefaults.object(forKey: UserDefaultsKey.postWordsArray) as? [String] {
             self.generatePickerData(wordsArray: wordsArray)
         }
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(sentSuccess),
+                                               name: Notification.Name("sentSuccess"),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(sentFailed),
+                                               name: Notification.Name("sentFailed"),
+                                               object: nil)
     }
     
     override func didDeactivate() {
@@ -49,6 +57,7 @@ class InterfaceController: WKInterfaceController {
     }
 
     private func generatePickerData(wordsArray: [String]) {
+        self.pickerArray = []
         for word in wordsArray {
             let pickerItem = WKPickerItem()
             pickerItem.title = word
@@ -64,8 +73,37 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func sendAction() {
-        self.sendButton.setTitle("Send")
         self.sendButton.setEnabled(false)
+        // Slackに送信
+        if let selectedWord = self.selectedWord {
+            PostWordsManager.postWords(word: selectedWord)
+        }
+    }
+
+    @objc func sentSuccess(notification: Notification) {
+        self.sendButton.setTitle("Send")
+        let action = WKAlertAction(title: "OK",
+                                   style: .cancel,
+                                   handler: {
+                                    self.sendButton.setEnabled(false)
+        })
+        self.presentAlert(withTitle: "Success",
+                          message: "Sent Successfully.",
+                          preferredStyle: .alert,
+                          actions: [action])
+    }
+
+    @objc func sentFailed(notification: Notification) {
+        self.sendButton.setTitle("Send")
+        let action = WKAlertAction(title: "OK",
+                                   style: .cancel,
+                                   handler: {
+                                    self.sendButton.setEnabled(false)
+        })
+        self.presentAlert(withTitle: "Failed",
+                          message: "Check inputed data again.",
+                          preferredStyle: .alert,
+                          actions: [action])
     }
 }
 
