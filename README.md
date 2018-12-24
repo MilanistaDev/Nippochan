@@ -2,6 +2,8 @@
 
 ## Commentary article
 
+https://qiita.com/MilanistaDev/items/b97cab77d6add96c96dc
+
 ## Summary
 This is a sample app that can post daily report to Slack
 by using Watch Connectivity and Slack's webhook URL.
