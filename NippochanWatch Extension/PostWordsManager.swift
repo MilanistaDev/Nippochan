@@ -28,15 +28,15 @@ class PostWordsManager {
         attachmentsDic["author_link"] = authorLink
         attachmentsDic["author_icon"] = authorIcon
         attachmentsDic["text"] = word
-        attachmentsDic["footer"] = "via 日報ちゃん"
-        attachmentsDic["footer_icon"] = URLLink.appIcon
+        attachmentsDic["footer"] = "via  WATCH"
+        attachmentsDic["footer_icon"] = URLLink.watchKitIcon
 
         var attachments = Array<Any>()
         attachments.append(attachmentsDic)
 
         var params = Dictionary<String, Any>()
-        params["username"] = "ん？Apple Watchからメッセージが・・・"
-        params["icon_emoji"] = ":face_with_monocle:"
+//        params["username"] = "ん？Apple Watchからメッセージが・・・"
+//        params["icon_emoji"] = ":face_with_monocle:"
         params["attachments"] = attachments
 
         do {

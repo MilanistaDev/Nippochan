@@ -27,6 +27,7 @@ struct URLLink {
     static let slackWebhook = "https://slack.com/services/new/incoming-webhook"
     static let colorConv = "https://itunes.apple.com/jp/app/color-convertor/id1203567143?mt=8"
     static let appIcon = "https://4.bp.blogspot.com/-zMlYavqwYrw/XBs5sPGYkFI/AAAAAAAAFec/kNM7EQVj_nY85wWezdwVDBRcE_823a5DwCLcBGAs/s1600/app_icon_60%25403x.png"
+    static let watchKitIcon = "http://devmonologue.com/images/2014/11/watchkit_2x.png"
 }
 
 struct NaviTitle {
