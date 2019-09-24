@@ -44,7 +44,7 @@
                                                 <rect key="frame" x="40" y="215" width="295" height="20"/>
                                                 <color key="tintColor" red="0.26348713039999999" green="0.58956122399999999" blue="0.30592468379999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1P-jh-2ju">
                                                 <rect key="frame" x="35" y="60" width="305" height="1"/>
