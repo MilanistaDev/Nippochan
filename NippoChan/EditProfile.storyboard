@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cZv-xK-Cba">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cZv-xK-Cba">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myt-Fu-bvU">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7r-oZ-bsM">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="364"/>
@@ -27,28 +25,24 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kov-x3-4cb">
                                                 <rect key="frame" x="40" y="32" width="295" height="20"/>
                                                 <color key="tintColor" red="0.26348713039999999" green="0.58956122399999999" blue="0.30592468379999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Company (Optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y2z-yM-wz4">
                                                 <rect key="frame" x="40" y="93" width="295" height="20"/>
                                                 <color key="tintColor" red="0.26348713039999999" green="0.58956122399999999" blue="0.30592468379999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Member ID (Optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBp-VF-ASp">
                                                 <rect key="frame" x="40" y="154" width="295" height="20"/>
                                                 <color key="tintColor" red="0.26348713039999999" green="0.58956122399999999" blue="0.30592468379999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Profile Image URL (Optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RzR-J6-s9p">
                                                 <rect key="frame" x="40" y="215" width="295" height="20"/>
                                                 <color key="tintColor" red="0.26348713039999999" green="0.58956122399999999" blue="0.30592468379999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
                                             </textField>
@@ -81,7 +75,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="RzR-J6-s9p" firstAttribute="leading" secondItem="kov-x3-4cb" secondAttribute="leading" id="1xJ-rU-81h"/>
@@ -121,7 +115,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="vzR-9g-AFC" firstAttribute="bottom" secondItem="myt-Fu-bvU" secondAttribute="bottom" id="Uuj-O5-eM6"/>
                             <constraint firstItem="vzR-9g-AFC" firstAttribute="trailing" secondItem="myt-Fu-bvU" secondAttribute="trailing" id="WoV-mz-wIG"/>
