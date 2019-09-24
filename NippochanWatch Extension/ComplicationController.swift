@@ -36,7 +36,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         switch complication.family {
         case .graphicCircular:
             let graphicCircularImageTemplate = CLKComplicationTemplateGraphicCircularImage()
-            let fullColorImage = UIImage(named: "Graphic Circular")
+            let fullColorImage = UIImage(named: "Complication/Graphic Circular")
             let imageProvider = CLKFullColorImageProvider(fullColorImage: fullColorImage!)
             graphicCircularImageTemplate.imageProvider = imageProvider
             let entry = CLKComplicationTimelineEntry(date: Date(),
@@ -64,7 +64,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         switch complication.family {
         case .graphicCircular:
             let graphicCircularImageTemplate = CLKComplicationTemplateGraphicCircularImage()
-            let fullColorImage = UIImage(named: "Graphic Circular")
+            let fullColorImage = UIImage(named: "Complication/Graphic Circular")
             let imageProvider = CLKFullColorImageProvider(fullColorImage: fullColorImage!)
             graphicCircularImageTemplate.imageProvider = imageProvider
             handler(graphicCircularImageTemplate)
