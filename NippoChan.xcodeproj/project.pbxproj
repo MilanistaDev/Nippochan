@@ -402,13 +402,16 @@
 				TargetAttributes = {
 					19214EDD21C124D00036049D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 					};
 					19214EF121C124D20036049D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 						TestTargetID = 19214EDD21C124D00036049D;
 					};
 					19214EFC21C124D20036049D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 						TestTargetID = 19214EDD21C124D00036049D;
 					};
 					19214F1021C12B550036049D = {
@@ -725,7 +728,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ASTK.NippoChan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -744,7 +747,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ASTK.NippoChan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -764,7 +767,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ASTK.NippoChanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NippoChan.app/NippoChan";
 			};
@@ -785,7 +788,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ASTK.NippoChanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NippoChan.app/NippoChan";
 			};
@@ -805,7 +808,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ASTK.NippoChanUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = NippoChan;
 			};
@@ -825,7 +828,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ASTK.NippoChanUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = NippoChan;
 			};
@@ -847,7 +850,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
@@ -869,7 +872,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
