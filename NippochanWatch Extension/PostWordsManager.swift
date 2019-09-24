@@ -48,7 +48,7 @@ class PostWordsManager {
 
         let task = URLSession.shared.dataTask(with: request)
         { (data: Data?, response: URLResponse?, error: Error?) in
-            if let error = error {
+            if error != nil {
                 NotificationCenter.default.post(name: Notification.Name("sentFailed"), object: nil)
                  //print(error.localizedDescription)
                 return
