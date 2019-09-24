@@ -98,11 +98,16 @@ final class ShareDataWithWatchViewController: UIViewController {
         // Apple Watch へ送るDictionary
         let dic = GenerateShareDataManager.generateShareDataDic()
 
+        // アラートはMainスレッドで書かないとクラッシュ
         self.session.sendMessage(dic, replyHandler: { (replyDic) in
-            self.showAlertDialog(title: replyDic["replyStatus"] as? String ?? "?",
-                                 message: "Successfully sent necessary data to Apple Watch.")
+            DispatchQueue.main.async {
+                self.showAlertDialog(title: replyDic["replyStatus"] as? String ?? "?",
+                                     message: "Successfully sent necessary data to Apple Watch.")
+            }
         }) { (error: Error) in
-            self.showAlertDialog(title: "Error", message: error.localizedDescription)
+            DispatchQueue.main.async {
+                self.showAlertDialog(title: "Error", message: error.localizedDescription)
+            }
         }
     }
 
